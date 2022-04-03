@@ -50,6 +50,12 @@ TagManager:
   - name: Interactive Object
     uniqueID: 466182027
     locked: 0
+  - name: Player
+    uniqueID: 3545913363
+    locked: 0
+  - name: Front
+    uniqueID: 3486748977
+    locked: 0
   - name: UI
     uniqueID: 1077844793
     locked: 0
