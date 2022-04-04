@@ -78,7 +78,7 @@ public class CardManagerScript : MonoBehaviour
         */
         //func2:
         int randomIndex = Random.Range(0, cardState.Length - 1);
-        Debug.Log(randomIndex);
+        //Debug.Log(randomIndex);
         return cardState[randomIndex];
     }
 
