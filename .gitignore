@@ -57,6 +57,3 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
-
-# large Resources
-/Assets/Images/GuaidanceScene/400pics
