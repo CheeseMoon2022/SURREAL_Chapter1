@@ -8,7 +8,7 @@ public class PageControlScript : MonoBehaviour
     //该脚本用于在章节选择中控制左右翻页的逻辑
     //public int pageNum = 3;
     public List<GameObject> pageList;
-    public CameraControlScript camera;
+    public ChapterSelect_Camera camera;
     public GameObject leftBtn;
     public GameObject rightBtn;
     private int pageNum;
@@ -36,9 +36,6 @@ public class PageControlScript : MonoBehaviour
             camera.cameraMove(pageList[curPage].transform.position);
            
         }
-        
-
-
    }
 
     public void rightPage()

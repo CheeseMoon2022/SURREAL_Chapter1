@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class CameraControlScript : MonoBehaviour
+public class ChapterSelect_Camera : MonoBehaviour
 {
     // Start is called before the first frame update
     public bool moving;
