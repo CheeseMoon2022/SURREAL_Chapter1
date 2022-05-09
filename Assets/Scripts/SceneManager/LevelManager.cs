@@ -7,6 +7,8 @@ public class LevelManager
 {
     // 
     private static LevelManager _ins;
+    public Level level;
+    public Chapter chapter;
     public static LevelManager _Ins 
     { get 
         {
@@ -17,10 +19,10 @@ public class LevelManager
             return _ins;
         } 
     }
-    public Level level;
 
     public void loadScene()
     {
+        //加载场景
         saveUpdate();
         SceneManager.LoadScene(level.sceneName, LoadSceneMode.Single);
     }
@@ -32,6 +34,7 @@ public class LevelManager
         UserData._Ins.cur_level_id = level.level_id;
         UserData._Ins.save();
         //更新levelMenu
+        LevelMenu._Ins.chapter = chapter;
         LevelMenu._Ins.level = level;
     }
 }

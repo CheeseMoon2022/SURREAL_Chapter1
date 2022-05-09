@@ -5,7 +5,8 @@ using UnityEngine;
 public class LevelMenu:MonoBehaviour
 {
     private static LevelMenu _ins;
-    public static GameObject uiPrefab;
+    public Chapter chapter;
+    public Level level;
     public static LevelMenu _Ins
     {
         get
@@ -17,8 +18,7 @@ public class LevelMenu:MonoBehaviour
 
                 if (_ins == null)  // 如果没有找到
                 {
-                    uiPrefab = (GameObject)Resources.Load("LevelMenuUI");
-                    GameObject obj = Instantiate(uiPrefab);
+                    GameObject obj = Instantiate((GameObject)Resources.Load("LevelMenuUI"));
                     DontDestroyOnLoad(obj);  // 防止被销毁
                     _ins = obj.AddComponent<LevelMenu>(); // 将实例挂载到GameObject上
                 }
@@ -26,14 +26,9 @@ public class LevelMenu:MonoBehaviour
             return _ins;
         }
     }
-    public Chapter chapter;
-    public Level level;
-
     public void updateLevel(Chapter chapter,Level level)
     {
         this.chapter = chapter;
         this.level = level;
     }
-
-
 }

@@ -8,14 +8,11 @@ public class Puzzle : MonoBehaviour
     public bool isEnd = false;
     public virtual void puzzleStart()
     {
-        //该谜题初始：动画播放等
-
+        //该谜题初始
     }
 
     public virtual void puzzleEnd()
     {
-        //该谜题结束：下一个谜题
+        //该谜题结束
     }
-
-
 }
