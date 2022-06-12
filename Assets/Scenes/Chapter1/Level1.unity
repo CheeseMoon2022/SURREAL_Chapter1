@@ -1967,7 +1967,7 @@ MonoBehaviour:
   - {fileID: 125827777}
   index: 0
   isComplete: 0
-  nextLevel: {fileID: 0}
+  nextLevel: {fileID: 11400000, guid: f7696668454da264bbf9d51f673960f6, type: 2}
 --- !u!1 &243836476
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ public class SelectChapter : MonoBehaviour
     public Chapter chapter;
     private void OnMouseDown()
     {
-        if (ClickFlag.GetInstance().CanClick)
+        if (chapter.unlocked && ClickFlag.GetInstance().CanClick)
         {
             //加载关卡
             loadScene();
@@ -27,6 +27,9 @@ public class SelectChapter : MonoBehaviour
             //给关卡ui赋值
             LevelMenu._Ins.chapter = chapter;
             LevelMenu._Ins.level = chapter.levels[UserData._Ins.cur_level_id];
+            //给levelManager赋值
+            LevelManager._Ins.chapter = chapter;
+            LevelManager._Ins.level = chapter.levels[UserData._Ins.cur_level_id];
         }
         else
         {
@@ -35,10 +38,12 @@ public class SelectChapter : MonoBehaviour
             //给关卡ui赋值
             LevelMenu._Ins.chapter = chapter;
             LevelMenu._Ins.level = chapter.levels[0];
+            //给levelManager赋值
+            LevelManager._Ins.chapter = chapter;
+            LevelManager._Ins.level = chapter.levels[0];
             //更新存档
             saveUpdate();
         }
-        //Debug.Log(UserData._Ins.cur_chapter_id + "" +  UserData._Ins.cur_level_id);
     }
 
     public virtual void saveUpdate()
